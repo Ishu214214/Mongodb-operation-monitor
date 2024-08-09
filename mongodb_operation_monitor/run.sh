@@ -1,0 +1,1 @@
+/usr/bin/python3 /home/chinmay/Desktop/ishu/ishu_python_project/mongodb_operation_monitor/copy_mongo_log_secudeler.py

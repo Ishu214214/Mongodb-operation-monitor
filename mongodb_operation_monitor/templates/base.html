@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <!-- added catche -control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Your common styles here */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100vw;
+            z-index: 99;
+        }
+
+        .container-fluid {
+            padding-top: 62px;
+        }
+
+        .sidebar {
+            height: 100vh;
+        }
+
+        .active {
+            background-color: #343a40;
+        }
+
+        .active a {
+            color: #ffffff;
+        }
+
+        .dashboard-title {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+        }
+
+     
+    </style>
+    <!-- {% block extra_head %}{% endblock %} -->
+</head>
+
+<body>
+    <div class="loader"></div>
+    <header class="position-fixed">
+        <div class="bg-dark text-light">
+            <span class="d-inline-block py-3 fs-5 dashboard-title">Onesearch Script Log </span>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 bg-dark sidebar position-fixed">
+                <ul>
+                  <li class="text-decoration-none py-3 {% if request.path == '/' %}active{% endif %}">
+                        <a href="#" class="text-decoration-none text-light loader-link">
+                            <span><i class="fas fa-table px-2"></i></span>
+                            Onesearch Script Log
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 bg-dark sidebar">
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   
+</body>
+</html>

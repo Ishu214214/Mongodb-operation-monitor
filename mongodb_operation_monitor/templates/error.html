@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Error - Onesearch Script Log{% endblock %}
+{% block content %}
+<div class="col-sm-10 col-md-10 col-lg-10 ">
+    <div class="container-fluid px-4">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">{% if error_message %}<i class="fas fa-exclamation-triangle"></i> Connection Error{% endif %}</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Oops!</strong> We encountered a connection error with the database.
+                        </div>
+                        <p class="mt-3"> make sure your internet is working properly and try again. 
+                            If you're still having trouble, reach out to the administrator for help.</p>
+                        <ul>
+                            <li>Double-check your internet connection and try again.</li>
+                            <li>Contact your system administrator for further assistance.</li>
+                        </ul>
+                        <p class="mt-3"><strong>Details:</strong></p>
+                        <p>{{ error_message }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

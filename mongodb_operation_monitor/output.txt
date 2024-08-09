@@ -1,0 +1,4 @@
+ OneSerach Script Log Call 
+2024-06-09 00:00:00.128545 2024-06-10 00:00:00.128545
+Time Taken in query: 2.0774197578430176
+{'date': '2024-06-10 13:25:01', 'insert_query': 0, 'delete_query': 0, 'update_query': 0}
